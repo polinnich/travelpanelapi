@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Панель путешественника</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand__mark">✈</span><span>waypoint<span class="brand__dot">.</span></span></div>
+      <div class="sidebar__group">
+        <p class="eyebrow">МОЯ ПАНЕЛЬ</p>
+        <h2>Добавить виджет</h2>
+        <p class="sidebar__hint">Выбери, какая карточка нужна на экране.</p>
+        <div class="sidebar__buttons">
+          <button class="add-button" type="button" data-add="tasks"><span>✓</span> Задачи <b>+</b></button>
+          <button class="add-button" type="button" data-add="weather"><span>☀</span> Погода <b>+</b></button>
+          <button class="add-button" type="button" data-add="currency"><span>⇄</span> Курсы валют <b>+</b></button>
+        </div>
+      </div>
+      <div class="sidebar__bottom">Практическая работа · Open-Meteo + Frankfurter</div>
+    </aside>
+
+    <main class="main">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">ПУТЕШЕСТВИЕ НАЧИНАЕТСЯ ЗДЕСЬ</p>
+          <h1>Панель путешественника <span>🌍</span></h1>
+          <p class="page-header__subtitle">Всё важное для поездки — в одном месте.</p>
+        </div>
+        <span class="demo-badge">LIVE API</span>
+      </header>
+      <div class="notice"><span>ℹ</span> Список дел, погода (Open-Meteo) и курсы валют (Frankfurter) работают полностью. Ошибка одной карточки не ломает остальные.</div>
+      <section class="dashboard">
+        <div class="section-heading"><h2>Мои виджеты</h2><span id="widget-count">0 карточек</span></div>
+        <div class="widget-grid" id="widget-grid" aria-live="polite"></div>
+        <p class="empty-state" id="empty-state" hidden>Панель пуста. Добавь виджет с помощью кнопок слева или сверху.</p>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
